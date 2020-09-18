@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "YORK_4_Android_App"
