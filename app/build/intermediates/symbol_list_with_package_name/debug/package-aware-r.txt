@@ -1975,7 +1975,6 @@ id textView2
 id textView3
 id textViewDetail2
 id textViewError
-id textViewHW
 id textViewID
 id textViewStName
 id textVw1
