@@ -131,6 +131,12 @@ public class Database extends SQLiteOpenHelper {
             return true;
     }
 
+    public Cursor getImageData(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from "+TABLE_NAME1, null);
+        return res;
+    }
+
     //----------------------------------------------------------------------------
 
     //Insert UploadError data

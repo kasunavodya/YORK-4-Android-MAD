@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ public class UploadHW extends AppCompatActivity {
     Integer REQUEST_CAMERA = 1, SELECT_FILE = 0;
     AutoCompleteTextView Title;
     Button UploadBtn;
+    Button ViewBtn;
     TextView editId, editName;
 
     @Override
@@ -37,6 +39,7 @@ public class UploadHW extends AppCompatActivity {
         editName = (TextView) findViewById(R.id.textViewStName);
         Title = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView);
         UploadBtn = (Button) findViewById(R.id.buttonHW2);
+        ViewBtn = (Button) findViewById(R.id.buttonHW);
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
 
         final String id = getIntent().getStringExtra("editId");
@@ -45,6 +48,7 @@ public class UploadHW extends AppCompatActivity {
         editId.setText(id);
         editName.setText(name);
         AddData1();
+        viewAllImage();
 
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -147,6 +151,46 @@ public class UploadHW extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+    public void viewAllImage(){
+
+        ViewBtn.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Cursor res = myDb1.getImageData();
+                        if (res.getCount() == 0) {
+                            //show message
+                            showMessage("Error", "Nothing found");
+                            return;
+                        }
+
+                        StringBuffer buffer = new StringBuffer();
+                        while (res.moveToNext()) {
+
+                            buffer.append("ID:" + res.getString(0) + "\n");
+                            buffer.append("Homework Title:" + res.getString(1) + "\n");
+                            buffer.append("Upload Image:" + res.getString(2) + "\n\n");
+
+                        }
+
+                        //show all data
+                        showMessage("View Homework Data", buffer.toString());
+                    }
+                }
+        );
+
+    }
+
+    public void showMessage (String title, String Message){
+
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Message);
+        builder.show();
+
     }
 
 }
