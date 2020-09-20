@@ -47,24 +47,6 @@
         app:layout_constraintVertical_bias="0.022"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textViewHW"
-        android:layout_width="380dp"
-        android:layout_height="53dp"
-        android:background="#F8DEDE"
-        android:shadowColor="#EA4B4B"
-        android:text="@string/TestHW"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#F60F0F"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087" />
-
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView"
         style="@style/uploadDetails"
@@ -76,7 +58,7 @@
         app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.312" />
+        app:layout_constraintVertical_bias="0.272" />
 
     <Button
         android:id="@+id/buttonHW2"
@@ -91,7 +73,7 @@
         app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
+        app:layout_constraintVertical_bias="0.812" />
 
     <Button
         android:id="@+id/buttonHW"
@@ -106,7 +88,7 @@
         app:layout_constraintHorizontal_bias="0.844"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
+        app:layout_constraintVertical_bias="0.812" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -117,7 +99,7 @@
         app:layout_constraintHorizontal_bias="0.705"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622"
+        app:layout_constraintVertical_bias="0.532"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -137,58 +119,59 @@
 
     <TextView
         android:id="@+id/TextError"
-        android:layout_width="181dp"
-        android:layout_height="34dp"
+        android:layout_width="410dp"
+        android:layout_height="44dp"
+        android:background="#1D4C3939"
         android:text="@string/Text17"
+        android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.971" />
+        app:layout_constraintVertical_bias="0.895" />
 
     <TextView
         android:id="@+id/textVw1"
         android:layout_width="108dp"
         android:layout_height="29dp"
-        android:background="#FFFFFF"
+        android:background="#07FFFFFF"
         android:text="@string/Text18"
         android:textColor="#2196F3"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.716"
+        app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.964" />
+        app:layout_constraintVertical_bias="0.908" />
 
     <TextView
         android:id="@+id/textViewID"
         android:layout_width="90dp"
         android:layout_height="35dp"
-        android:textAlignment="textEnd"
-        android:textColor="#2196F3"
+        android:textAlignment="center"
+        android:textColor="#092A45"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintVertical_bias="0.139" />
 
     <TextView
         android:id="@+id/textViewStName"
         android:layout_width="225dp"
         android:layout_height="39dp"
-        android:textAlignment="textEnd"
-        android:textColor="#2196F3"
+        android:textAlignment="center"
+        android:textColor="#092A45"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintVertical_bias="0.105" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

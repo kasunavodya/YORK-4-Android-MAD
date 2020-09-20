@@ -29,8 +29,7 @@
     <string name="Test16">Select Current Date</string>
     <string name="Btn3">Select</string>
     <string name="Btn4">Upload</string>
-    <string name="TestError">If you encounter any interruptions or
-                            errors while uploading homework,
+    <string name="TestError">If you encounter any interruptions while uploading homework or have any feedback,
                             please indicate it.</string>
     <string name="Msg">Type here</string>
     <string name="Btn5">Submit</string>
@@ -47,7 +46,7 @@
     <string name="btn1">ADD TIMETABLE</string>
     <string name="btn2">UPLOAD NOTES</string>
     <string name="textyork">Presented_By_YORK_4_Android</string>
-    <string name="Text17">If you have any interrupts</string>
+    <string name="Text17">If you have any interrupts or feedback</string>
     <string name="Text18">CLICK HERE</string>
     <string name="Btn7">VIEW</string>
 </resources>
