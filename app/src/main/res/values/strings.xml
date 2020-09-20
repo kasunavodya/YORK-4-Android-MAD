@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">YORK_4_Android_App</string>
+    <string name="Image1">imageNotice</string>
+    <string name="Text1"><a href="#">Click to see special notices</a></string>
+    <string name="Text2">Click on the button below to begin entering student details.</string>
+    <string name="Text3">Enter student details</string>
+    <string name="Text4">All fields are required to fill</string>
+    <string name="Text5">Student ID</string>
+    <string name="Text6">Student Name</string>
+    <string name="Btn">ADD</string>
+    <string name="Btn1">UPDATE</string>
+    <string name="Btn2">VIEW ALL</string>
+    <string name="Text7">Subject</string>
+    <string name="Test8">Grade</string>
+    <string name="radio">Mathematics</string>
+    <string name="radio1">Science</string>
+    <string name="radio2">English</string>
+    <string name="radio3">IT</string>
+    <string name="Test9">Update student details</string>
+    <string name="btnUpdate">UPDATE</string>
+    <string name="btnDelete">DELETE</string>
+    <string name="Test10">View student details</string>
+    <string name="Text11">Student ID:</string>
+    <string name="Test12">"Student Name: "</string>
+    <string name="Test13">"Grade: "</string>
+    <string name="Test14">"Subject: "</string>
+    <string name="TestHW">Important! Once it is uploaded. It cannot be edited.</string>
+    <string name="Test15">Enter Homework Title</string>
+    <string name="Test16">Select Current Date</string>
+    <string name="Btn3">Select</string>
+    <string name="Btn4">Upload</string>
+    <string name="TestError">If you encounter any interruptions or
+                            errors while uploading homework,
+                            please indicate it.</string>
+    <string name="Msg">Type here</string>
+    <string name="Btn5">Submit</string>
+    <string name="Btn17">Next</string>
+    <string name="image">uploadImage</string>
+    <string name="title">Upload Homework</string>
+    <string name="image1">search</string>
+    <string name="image2">bar</string>
+    <string name="button1">ADMIN</string>
+    <string name="txtH">HIC e-learning system</string>
+    <string name="button2">STUDENT</string>
+    <string name="btn01">TERM REGISTRATION</string>
+    <string name="btn02">UPLOAD HOMEWORK</string>
+    <string name="btn1">ADD TIMETABLE</string>
+    <string name="btn2">UPLOAD NOTES</string>
+    <string name="textyork">Presented_By_YORK_4_Android</string>
+    <string name="Text17">If you have any interrupts</string>
+    <string name="Text18">CLICK HERE</string>
+    <string name="Btn7">VIEW</string>
+</resources>

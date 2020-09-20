@@ -19,6 +19,7 @@ public class Database extends SQLiteOpenHelper {
     public static final String TABLE_NAME1 = "UploadHwImage";
     //HomeworkError table
     public static final String TABLE_NAME2 = "UploadError";
+
     //HomeworkError table
     public static final String TABLE_NAME3 = "time_table";
 
@@ -36,6 +37,7 @@ public class Database extends SQLiteOpenHelper {
     //UploadError table columns
     public static final String COLL1 = "ID";
     public static final String COLL2 = "ERROR";
+
 
     //timetable table columns
     public static final String COL_01 = "ID";
@@ -56,7 +58,9 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("create table " + TABLE_NAME + " (ID TEXT PRIMARY KEY , NAME TEXT, GRADE INTEGER, SUBJECT TEXT)");
         db.execSQL("create table " + TABLE_NAME1 + " (ID TEXT PRIMARY KEY , TITLE TEXT, IMAGE BLOB NOT NULL )");
         db.execSQL("create table " + TABLE_NAME2 + " (ID TEXT PRIMARY KEY , ERROR TEXT )");
+
         db.execSQL("create table " + TABLE_NAME3 + "(ID INTEGER PRIMARY KEY AUTOINCREMENT , sub_name TEXT , start_time INT , end_time INT , venue TEXT , lecture_name TEXT)" );
+
     }
 
     @Override
@@ -144,6 +148,7 @@ public class Database extends SQLiteOpenHelper {
             return true;
     }
 
+
     //----------------------------------------------------------------------------
 
     //Insert timetable data
@@ -186,4 +191,5 @@ public class Database extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         return sqLiteDatabase.delete( TABLE_NAME3, "ID = ? " , new String[] { sub_id} );
     }
+
 }
