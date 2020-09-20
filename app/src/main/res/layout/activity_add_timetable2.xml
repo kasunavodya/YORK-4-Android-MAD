@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTimetable2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Select a Date"
+        android:textSize="30sp"
+        android:gravity="top"/>
+
+    <Button
+        android:id="@+id/btone3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="Monady"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="523dp"
+        android:text="Monday"
+        tools:ignore="MissingConstraints,OnClick" />
+
+    <Button
+        android:id="@+id/btone4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="253dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="430dp"
+        android:onClick="Monady"
+        android:text="Tuesday"
+        tools:ignore="MissingConstraints,OnClick" />
+
+    <Button
+        android:id="@+id/btone5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="323dp"
+        android:onClick="Monady"
+        android:text="Wednesday"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/btone6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="466dp"
+        android:layout_marginEnd="169dp"
+        android:layout_marginBottom="217dp"
+        android:onClick="Monady"
+        android:text="Thursday"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/btone7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="577dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginBottom="106dp"
+        android:onClick="Monady"
+        android:text="Friday"
+        tools:ignore="OnClick" />
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTimetable">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:text="Select One"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-354dp" />
+
+    <Button
+        android:id="@+id/btone"
+        android:layout_width="119dp"
+        android:layout_height="104dp"
+        android:onClick="Week Days"
+        android:text="Week Ends"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.561"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/btone2"
+        android:layout_width="119dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="204dp"
+        android:onClick="Week End"
+        android:text="Week Days"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
