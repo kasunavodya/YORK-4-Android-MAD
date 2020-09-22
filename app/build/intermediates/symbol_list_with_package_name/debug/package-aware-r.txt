@@ -1552,6 +1552,7 @@ drawable forward
 drawable h2
 drawable h3
 drawable h5
+drawable hogw
 drawable home1
 drawable home2
 drawable ic_launcher_background
@@ -1811,6 +1812,9 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageViewHogwarts
+id imageViewHogwarts1
+id imageViewHogwarts3
 id info
 id invisible
 id italic
@@ -1951,6 +1955,7 @@ id staticLayout
 id staticPostLayout
 id stop
 id stretch
+id studentDetailsShow
 id submenuarrow
 id submit_area
 id tabMode
