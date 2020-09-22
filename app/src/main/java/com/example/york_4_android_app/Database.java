@@ -19,7 +19,6 @@ public class Database extends SQLiteOpenHelper {
     public static final String TABLE_NAME1 = "UploadHwImage";
     //HomeworkError table
     public static final String TABLE_NAME2 = "UploadError";
-
     //HomeworkError table
     public static final String TABLE_NAME3 = "time_table";
 
@@ -37,7 +36,6 @@ public class Database extends SQLiteOpenHelper {
     //UploadError table columns
     public static final String COLL1 = "ID";
     public static final String COLL2 = "ERROR";
-
 
     //timetable table columns
     public static final String COL_01 = "ID";
@@ -58,7 +56,6 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("create table " + TABLE_NAME + " (ID TEXT PRIMARY KEY , NAME TEXT, GRADE INTEGER, SUBJECT TEXT)");
         db.execSQL("create table " + TABLE_NAME1 + " (ID TEXT PRIMARY KEY , TITLE TEXT, IMAGE BLOB NOT NULL )");
         db.execSQL("create table " + TABLE_NAME2 + " (ID TEXT PRIMARY KEY , ERROR TEXT )");
-
         db.execSQL("create table " + TABLE_NAME3 + "(ID INTEGER PRIMARY KEY AUTOINCREMENT , sub_name TEXT , start_time INT , end_time INT , venue TEXT , lecture_name TEXT)" );
 
     }
@@ -135,6 +132,21 @@ public class Database extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from "+TABLE_NAME1, null);
         return res;
+    }
+
+    public boolean updateImgData (String id, String title, ImageView image) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL1,id);
+        contentValues.put(COL2,title);
+        contentValues.put(COL3, String.valueOf(image));
+        db.update(TABLE_NAME1, contentValues, "ID = ?", new String[] { id });
+        return true;
+    }
+
+    public Integer deleteImgData (String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME1, "ID = ?", new String[] { id });
     }
 
     //----------------------------------------------------------------------------

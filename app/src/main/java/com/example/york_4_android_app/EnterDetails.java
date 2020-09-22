@@ -156,6 +156,7 @@ public class EnterDetails extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
         builder.setTitle(title);
+        builder.setIcon(R.drawable.hogw);
         builder.setMessage(Message);
         builder.show();
 
