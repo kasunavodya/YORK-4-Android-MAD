@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".AddSlip"/>
+        <activity android:name=".MainTermRegister" />
+        <activity android:name=".CalculateTF" />
         <activity android:name=".AddTimetable3"/>
         <activity android:name=".AddTimetable2" />
         <activity android:name=".AddTimetable" />

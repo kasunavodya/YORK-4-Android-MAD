@@ -49,4 +49,18 @@
     <string name="Text17">If you have any interrupts or feedback</string>
     <string name="Text18">CLICK HERE</string>
     <string name="Btn7">VIEW</string>
+    <string name="Text19">Regular Fee</string>
+    <string name="Text20">Library Fee</string>
+    <string name="Text21">Swimming Practice Fee</string>
+    <string name="Text22">Shuttle Service Fee</string>
+    <string name="Text23">Calculate Term Fee</string>
+    <string name="Text24">Registration Details</string>
+    <string name="Text25">Full Name:</string>
+    <string name="Text26">Student ID:</string>
+    <string name="Text27">Bank Slip</string>
+    <string name="Text28">Add Slip</string>
+    <string name="btn7">UPLOAD</string>
+    <string name="btn8">Calculate</string>
+    <string name="Text29">TERM REGISTRATION</string>
+    <string name="US">Upload Slip</string>
 </resources>
