@@ -27,6 +27,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.york_4_android_app.AddSlip" />
+        <activity android:name="com.example.york_4_android_app.MainTermRegister" />
+        <activity android:name="com.example.york_4_android_app.CalculateTF" />
         <activity android:name="com.example.york_4_android_app.AddTimetable3" />
         <activity android:name="com.example.york_4_android_app.AddTimetable2" />
         <activity android:name="com.example.york_4_android_app.AddTimetable" />

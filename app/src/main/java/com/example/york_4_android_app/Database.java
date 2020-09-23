@@ -21,6 +21,8 @@ public class Database extends SQLiteOpenHelper {
     public static final String TABLE_NAME2 = "UploadError";
     //HomeworkError table
     public static final String TABLE_NAME3 = "time_table";
+    //Term Register table
+    public static final String TABLE_NAME5 = "Register_table";
 
     //homework table columns
     public static final String COL_1 = "ID";
@@ -45,6 +47,10 @@ public class Database extends SQLiteOpenHelper {
     public static final String COL_05 = "venue";
     public static final String COL_06 = "lecture_name";
 
+    //Term Register table columns
+    public static final String COL_001 = "ID";
+    public static final String COL_002 = "NAME";
+
     public Database(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
         // SQLiteDatabase db = this.getWritableDatabase();
@@ -57,6 +63,7 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("create table " + TABLE_NAME1 + " (ID TEXT PRIMARY KEY , TITLE TEXT, IMAGE BLOB NOT NULL )");
         db.execSQL("create table " + TABLE_NAME2 + " (ID TEXT PRIMARY KEY , ERROR TEXT )");
         db.execSQL("create table " + TABLE_NAME3 + "(ID INTEGER PRIMARY KEY AUTOINCREMENT , sub_name TEXT , start_time INT , end_time INT , venue TEXT , lecture_name TEXT)" );
+        db.execSQL("create table " + TABLE_NAME5 + " (ID TEXT PRIMARY KEY , NAME TEXT)");
 
     }
 
@@ -66,6 +73,7 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME1);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME3);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME5);
         onCreate(db);
     }
 
@@ -209,5 +217,22 @@ public class Database extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         return sqLiteDatabase.delete( TABLE_NAME3, "ID = ? " , new String[] { sub_id} );
     }
+
+    //Insert registration data
+
+    public boolean insertRegData (String id, String name) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(COL_001,id);
+        contentValues.put(COL_002,name);
+        long result = db.insert(TABLE_NAME,null, contentValues);
+
+        if(result == -1)
+            return false;
+        else
+            return true;
+    }
+
 
 }

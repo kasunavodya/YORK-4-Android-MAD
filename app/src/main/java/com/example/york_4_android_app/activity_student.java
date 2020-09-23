@@ -33,6 +33,18 @@ public class activity_student extends AppCompatActivity {
             }
         });
 
+        final Button RegBtn = (Button) findViewById(R.id.btn1);
+        RegBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent activityIntent = new Intent(activity_student.this, MainTermRegister.class);
+                activity_student.this.startActivity(activityIntent);
+
+            }
+        });
+
     }
 
 }
