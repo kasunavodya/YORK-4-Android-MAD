@@ -39,6 +39,27 @@ public class Database extends SQLiteOpenHelper {
     public static final String COLL1 = "ID";
     public static final String COLL2 = "ERROR";
 
+    //Sign up table
+    public static final String TABLE_NAME6 = "signup_table";
+
+    //Notes Upload table
+    public static final String TABLE_NAME7 = "notes_table";
+
+    //Video Upload table
+    public static final String TABLE_NAME8 = "video_table";
+    //sign up table columns
+    public static final String NAME = "NAME";
+    public static final String EMAIL = "EMAIL";
+    public static final String PASSWORD = "PASSWORD";
+
+    //notes upload table columns
+    public static final String c1 = "NAME";
+    public static final String c2 = "GRADE";
+
+    //videoupload table columns
+    public static final String NAME_COL1= "NAME";
+    public static final String GRADE_COL2 = "GRADE";
+
     //timetable table columns
     public static final String COL_01 = "ID";
     public static final String COL_02 = "sub_name";
@@ -50,6 +71,9 @@ public class Database extends SQLiteOpenHelper {
     //Term Register table columns
     public static final String COL_001 = "ID";
     public static final String COL_002 = "NAME";
+
+
+
 
     public Database(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -65,6 +89,12 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("create table " + TABLE_NAME3 + "(ID INTEGER PRIMARY KEY AUTOINCREMENT , sub_name TEXT , start_time INT , end_time INT , venue TEXT , lecture_name TEXT)" );
         db.execSQL("create table " + TABLE_NAME5 + " (ID TEXT PRIMARY KEY , NAME TEXT)");
 
+
+        db.execSQL("create table " + TABLE_NAME6 + " (ID TEXT PRIMARY KEY , NAME TEXT, EMAIL TEXT, PASSOWRD TEXT)");
+        db.execSQL("create table " + TABLE_NAME7 + " (ID TEXT PRIMARY KEY , NAME TEXT, GRADE INTEGER)");
+        db.execSQL("create table " + TABLE_NAME8 + " (ID TEXT PRIMARY KEY , NAME TEXT, GRADE INTEGER)");
+
+
     }
 
     @Override
@@ -74,6 +104,10 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME3);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME5);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME6);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME7);
+        db.execSQL("DROP TABLE IF EXISTS " +TABLE_NAME8);
+
         onCreate(db);
     }
 
@@ -233,6 +267,74 @@ public class Database extends SQLiteOpenHelper {
         else
             return true;
     }
+
+
+
+    //insert admin data
+    public boolean insertDataAdmin ( String name, String email, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(NAME,name);
+        contentValues.put(EMAIL,email);
+        contentValues.put(PASSWORD,password);
+        long result = db.insert(TABLE_NAME6,null, contentValues);
+
+        if(result == -1)
+            return false;
+        else
+            return true;
+    }
+
+
+    public Integer deleteDataAdmin (String name){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME6, "NAME = ?", new String[] { name });
+    }
+
+
+    //insert notes upload data
+    public boolean insertToNotes ( String name, String grade) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(c1,name);
+        contentValues.put(c2,grade);
+        long result = db.insert(TABLE_NAME7,null, contentValues);
+
+        if(result == -1)
+            return false;
+        else
+            return true;
+    }
+
+
+
+    public Integer deleteNote(String grade){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME7, "grade = ?", new String[] { grade});
+    }
+
+    public boolean insertVideoTable(String name, String grade){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(c1,name);
+        contentValues.put(c2,grade);
+        long result = db.insert(TABLE_NAME7,null, contentValues);
+
+        if(result == -1)
+            return false;
+        else
+            return true;
+    }
+
+
+    public Integer deleteVideo(String grade){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME8, "grade = ?", new String[] { grade});
+    }
+
 
 
 }

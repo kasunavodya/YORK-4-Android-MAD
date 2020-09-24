@@ -51,7 +51,7 @@ public class HomePage extends AppCompatActivity {
                 Toast toast = Toast.makeText(context, message, duration);
                 toast.show();
 
-                Intent activityIntent = new Intent(HomePage.this, activity_admin.class);
+                Intent activityIntent = new Intent(HomePage.this, Admin_Login.class);
                 HomePage.this.startActivity(activityIntent);
 
             }

@@ -63,4 +63,11 @@
     <string name="btn8">Calculate</string>
     <string name="Text29">TERM REGISTRATION</string>
     <string name="US">Upload Slip</string>
+
+
+    <string name="Title">Enter the details</string>
+    <string name="Topic">Upload Videos</string>
+    <string name="title1">Upload Notices</string>
+    <string name="title3">Admin</string>
+    <string name="title4">Uploading</string>
 </resources>
