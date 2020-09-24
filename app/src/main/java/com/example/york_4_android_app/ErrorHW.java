@@ -1,6 +1,5 @@
 package com.example.york_4_android_app;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -30,7 +29,7 @@ public class ErrorHW extends AppCompatActivity {
         final ImageView previousBtn = (ImageView) findViewById(R.id.imageView3);
         editId = (TextView) findViewById(R.id.textViewID);
         editName = (TextView) findViewById(R.id.textViewStName);
-        ErrorText = (TextInputEditText) findViewById(R.id.TextInputType);
+        ErrorText = (TextInputEditText) findViewById(R.id.TextInputTypeID);
         submitBtn = (Button) findViewById(R.id.buttonError);
 
         final String id = getIntent().getStringExtra("editId");

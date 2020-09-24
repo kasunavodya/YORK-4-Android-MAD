@@ -16,7 +16,7 @@ import java.util.Arrays;
 
 public class activity_admin extends AppCompatActivity {
     Database myDb1;
-    TextView ViewAdmin;
+    TextView ViewAdmin,ViewAdmin1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,9 @@ public class activity_admin extends AppCompatActivity {
 
         final Button homeworkBtn = (Button) findViewById(R.id.button);
         ViewAdmin = (TextView) findViewById(R.id.studentDetailsShow);
+        ViewAdmin1 = (TextView) findViewById(R.id.studentDetailsShow2);
         viewAll();
+        viewUploadImage();
 
         homeworkBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -82,5 +84,48 @@ public class activity_admin extends AppCompatActivity {
         builder.show();
 
     }
+
+    public void viewUploadImage(){
+
+        ViewAdmin1.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Cursor res = myDb1.getImageData();
+                        if (res.getCount() == 0) {
+                            //show message
+                            showMessage("Error", "Nothing found");
+                            return;
+                        }
+
+                        StringBuffer buffer = new StringBuffer();
+                        while (res.moveToNext()) {
+
+                            buffer.append("ID: " + res.getString(0) + "\n");
+                            buffer.append("Title: " + res.getString(1) + "\n");
+                            buffer.append("Image: " + res.getBlob(2) + "\n\n");
+
+
+                        }
+
+                        //show all data
+                        showImgMessage("View Homework Data", buffer.toString());
+                    }
+                }
+        );
+
+    }
+
+    public void showImgMessage(String title, String Message){
+
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setIcon(R.drawable.hogw);
+        builder.setMessage(Message);
+        builder.show();
+
+    }
+
 
 }

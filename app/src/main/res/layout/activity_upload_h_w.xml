@@ -48,19 +48,17 @@
         app:layout_constraintVertical_bias="0.022"
         tools:ignore="MissingConstraints" />
 
-    <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView"
-        style="@style/uploadDetails"
-        android:layout_width="329dp"
-        android:layout_height="44dp"
-        android:text="@string/Test15"
-        android:textColor="#FFFFFF"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputTypeHW"
+        android:layout_width="316dp"
+        android:layout_height="58dp"
+        android:hint="Homework Title*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.237" />
+        app:layout_constraintVertical_bias="0.227" />
 
     <Button
         android:id="@+id/buttonHW2"
@@ -101,7 +99,7 @@
         app:layout_constraintHorizontal_bias="0.705"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461"
+        app:layout_constraintVertical_bias="0.48"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

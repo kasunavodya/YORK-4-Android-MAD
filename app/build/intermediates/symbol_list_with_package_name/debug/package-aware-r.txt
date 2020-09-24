@@ -1612,7 +1612,7 @@ id SYM
 id TOP_END
 id TOP_START
 id TextError
-id TextInputType
+id TextInputTypeID
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1677,7 +1677,6 @@ id asConfigured
 id async
 id auto
 id autoComplete
-id autoCompleteTextView
 id autoCompleteToEnd
 id autoCompleteToStart
 id barrier
@@ -1771,9 +1770,6 @@ id editTextTextPersonName3
 id editTextTextPersonName4
 id editTextTextPersonName5
 id editTextTextPersonName6
-id editTextTextPersonNameID
-id editTextTextPersonNameID2
-id editTextTextPersonNameID3
 id edit_query
 id end
 id enterAlways
@@ -1812,6 +1808,7 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageView4
 id imageViewHogwarts
 id imageViewHogwarts1
 id imageViewHogwarts3
@@ -1956,6 +1953,7 @@ id staticPostLayout
 id stop
 id stretch
 id studentDetailsShow
+id studentDetailsShow2
 id submenuarrow
 id submit_area
 id tabMode
@@ -1974,6 +1972,8 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
+id textInputTypeHW
+id textInputTypeName
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -1982,8 +1982,15 @@ id textView2
 id textView3
 id textViewDetail2
 id textViewError
+id textViewGrade
 id textViewID
+id textViewIDLabel
+id textViewIDLabel2
+id textViewIDLabel3
+id textViewIDLabel4
+id textViewName
 id textViewStName
+id textViewSubject
 id textVw1
 id textVw2
 id textVwDetail
@@ -2094,6 +2101,8 @@ layout activity_home_page
 layout activity_main
 layout activity_student
 layout activity_upload_h_w
+layout activity_view_student_details
+layout activity_view_upload_details
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2174,6 +2183,7 @@ string Btn4
 string Btn5
 string Btn7
 string Image1
+string ImageHW
 string Msg
 string Test10
 string Test12
@@ -2195,6 +2205,7 @@ string Text4
 string Text5
 string Text6
 string Text7
+string TitleHW
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2222,6 +2233,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string adm1
+string adm2
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior

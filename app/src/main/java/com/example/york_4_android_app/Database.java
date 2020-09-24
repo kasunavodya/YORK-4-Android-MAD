@@ -11,8 +11,8 @@ import androidx.annotation.Nullable;
 
 public class Database extends SQLiteOpenHelper {
 
+    //Database
     public static final String DATABASE_NAME = "HogwartsMAD.db";
-
     //Homework table
     public static final String TABLE_NAME = "homework_table";
     //HomeworkImage table
@@ -88,12 +88,14 @@ public class Database extends SQLiteOpenHelper {
             return true;
     }
 
+    //get student data
     public Cursor getAllData(){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from "+TABLE_NAME, null);
         return res;
     }
 
+    //update student data
     public boolean updateData (String id, String name, String grade, String subject) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -105,6 +107,7 @@ public class Database extends SQLiteOpenHelper {
         return true;
     }
 
+    //delete student data
     public Integer deleteData (String id){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME, "ID = ?", new String[] { id });
@@ -128,12 +131,14 @@ public class Database extends SQLiteOpenHelper {
             return true;
     }
 
+    //get UploadHwImage data
     public Cursor getImageData(){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from "+TABLE_NAME1, null);
         return res;
     }
 
+    //update UploadHwImage data
     public boolean updateImgData (String id, String title, ImageView image) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -144,6 +149,7 @@ public class Database extends SQLiteOpenHelper {
         return true;
     }
 
+    //delete UploadHwImage data
     public Integer deleteImgData (String id){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME1, "ID = ?", new String[] { id });
@@ -187,11 +193,15 @@ public class Database extends SQLiteOpenHelper {
         else
             return true;
     }
+
+    //get timetable data
     public Cursor getAllTimetableData() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor res = sqLiteDatabase.rawQuery( "select * from " +TABLE_NAME3, null );
         return res;
     }
+
+    //update timetable data
     public boolean updateTimetableData (String sub_id , String sub_name , String start_time , String end_time , String venue , String lecture_name ) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues(  );
@@ -205,6 +215,7 @@ public class Database extends SQLiteOpenHelper {
         return true;
     }
 
+    //delete timetable data
     public Integer deleteTimetableData (String sub_id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         return sqLiteDatabase.delete( TABLE_NAME3, "ID = ? " , new String[] { sub_id} );

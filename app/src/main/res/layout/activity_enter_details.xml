@@ -72,39 +72,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonNameID"
-        style="@style/enterDetails"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.238" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonNameID2"
-        style="@style/enterDetails1"
-        android:textColor="#FFFFFF"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/TextInputTypeID"
+        android:layout_width="294dp"
+        android:layout_height="51dp"
+        android:hint="Student ID*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347" />
+        app:layout_constraintVertical_bias="0.23" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonNameID3"
-        style="@style/enterDetails2"
-        android:text="@string/Test8"
-        android:textColor="#FFFFFF"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputTypeHW"
+        android:layout_width="294dp"
+        android:layout_height="51dp"
+        android:hint="Grade*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.456" />
+        app:layout_constraintVertical_bias="0.442" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputTypeName"
+        android:layout_width="294dp"
+        android:layout_height="51dp"
+        android:hint="Student Name*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336" />
 
     <Button
         android:id="@+id/button2"
@@ -175,7 +178,7 @@
         android:layout_width="90dp"
         android:layout_height="34dp"
         android:text="@string/Text7"
-        android:textColor="#FBF9F9"
+        android:textColor="#888585"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

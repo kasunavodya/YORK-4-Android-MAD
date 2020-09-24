@@ -1,26 +1,28 @@
 package com.example.york_4_android_app;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.content.Intent;
-import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 public class EnterDetails extends AppCompatActivity {
     Database myDb1;
-    EditText editId, editName, editGrade;
+    TextInputEditText editId, editName, editGrade;
     RadioGroup radGp;
-    RadioButton subject;
+    TextView subject;
     Button BtnAddData;
-    Button BtnViewAll;
+    Button BtnView;
     Button BtnUpdate;
     Button BtnDelete;
 
@@ -30,16 +32,15 @@ public class EnterDetails extends AppCompatActivity {
         setContentView(R.layout.activity_enter_details);
         myDb1 = new Database(this);
 
-        editId = (EditText) findViewById(R.id.editTextTextPersonNameID);
-        editName = (EditText) findViewById(R.id.editTextTextPersonNameID2);
-        editGrade = (EditText) findViewById(R.id.editTextTextPersonNameID3);
+        editId = (TextInputEditText) findViewById(R.id.TextInputTypeID);
+        editName = (TextInputEditText) findViewById(R.id.textInputTypeName);
+        editGrade = (TextInputEditText) findViewById(R.id.textInputTypeHW);
         radGp = (RadioGroup) findViewById(R.id.radioGp);
         BtnAddData = (Button) findViewById(R.id.button2);
-        BtnViewAll = (Button) findViewById(R.id.button9);
+        BtnView = (Button) findViewById(R.id.button9);
         BtnUpdate = (Button) findViewById(R.id.button3);
         BtnDelete = (Button) findViewById(R.id.button8);
         AddData();
-        viewAll();
         UpdateData();
         DeleteData();
 
@@ -55,6 +56,27 @@ public class EnterDetails extends AppCompatActivity {
                 Intent activityIntent = new Intent(EnterDetails.this, UploadHW.class);
                 activityIntent.putExtra("editId", id);
                 activityIntent.putExtra("editName", name);
+                EnterDetails.this.startActivity(activityIntent);
+
+            }
+        });
+
+        BtnView.setOnClickListener(new View.OnClickListener() {
+
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onClick(View view) {
+
+                final String id = editId.getText().toString();
+                final String name = editName.getText().toString();
+                final String grade = editGrade.getText().toString();
+                final String sub = subject.getText().toString();
+
+                Intent activityIntent = new Intent(EnterDetails.this, ViewStudentDetails.class);
+                activityIntent.putExtra("editId", id);
+                activityIntent.putExtra("editName", name);
+                activityIntent.putExtra("editGrade", grade);
+                activityIntent.putExtra("subject", sub);
                 EnterDetails.this.startActivity(activityIntent);
 
             }
@@ -118,48 +140,6 @@ public class EnterDetails extends AppCompatActivity {
                     }
                 }
         );
-    }
-
-    public void viewAll(){
-
-        BtnViewAll.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v) {
-                        Cursor res = myDb1.getAllData();
-                        if (res.getCount() == 0) {
-                            //show message
-                            showMessage("Error", "Nothing found");
-                            return;
-                        }
-
-                        StringBuffer buffer = new StringBuffer();
-                        while (res.moveToNext()) {
-
-                            buffer.append("Student ID:" + res.getString(0) + "\n");
-                            buffer.append("Student Name:" + res.getString(1) + "\n");
-                            buffer.append("Student Grade:" + res.getString(2) + "\n");
-                            buffer.append("Student Subject:" + res.getString(3) + "\n\n");
-
-                        }
-
-                        //show all data
-                        showMessage("View Student Data", buffer.toString());
-                    }
-                }
-        );
-
-    }
-
-    public void showMessage (String title, String Message){
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setIcon(R.drawable.hogw);
-        builder.setMessage(Message);
-        builder.show();
-
     }
 
 }
