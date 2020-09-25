@@ -1,22 +1,17 @@
 package com.example.york_4_android_app;
 
-
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.os.Bundle;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Arrays;
 
 public class activity_admin extends AppCompatActivity {
     Database myDb1;
-    TextView ViewAdmin;
+    TextView ViewAdmin, ViewAdmin1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,18 +19,30 @@ public class activity_admin extends AppCompatActivity {
         setContentView(R.layout.activity_admin);
         myDb1 = new Database(this);
 
-        final Button homeworkBtn = (Button) findViewById(R.id.button);
+        final Button TimetableBtn = (Button) findViewById(R.id.button);
+        final Button UploadBtn = (Button) findViewById(R.id.button);
         ViewAdmin = (TextView) findViewById(R.id.studentDetailsShow);
+        ViewAdmin1 = (TextView) findViewById(R.id.studentDetailsShow2);
         viewAll();
+        viewAllImage();
 
-        homeworkBtn.setOnClickListener(new View.OnClickListener() {
+        TimetableBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
 
                 Intent activityIntent = new Intent(activity_admin.this, AddTimetable.class);
                 activity_admin.this.startActivity(activityIntent);
+            }
+        });
 
+        UploadBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent activityIntent = new Intent(activity_admin.this, AddTimetable.class);
+                activity_admin.this.startActivity(activityIntent);
             }
         });
 
@@ -82,5 +89,48 @@ public class activity_admin extends AppCompatActivity {
         builder.show();
 
     }
+
+    public void viewAllImage(){
+
+        ViewAdmin1.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Cursor res = myDb1.getImageData();
+                        if (res.getCount() == 0) {
+                            //show message
+                            showMessage("Error", "Nothing found");
+                            return;
+                        }
+
+                        StringBuffer buffer = new StringBuffer();
+                        while (res.moveToNext()) {
+
+                            buffer.append("ID: " + res.getString(0) + "\n");
+                            buffer.append("Title: " + res.getString(1) + "\n");
+                            buffer.append("Image: " + res.getBlob(2) + "\n\n");
+
+
+                        }
+
+                        //show all data
+                        showImgMessage("View Homework Data", buffer.toString());
+                    }
+                }
+        );
+
+    }
+
+    public void showImgMessage(String title, String Message){
+
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setIcon(R.drawable.hogw);
+        builder.setMessage(Message);
+        builder.show();
+
+    }
+
 
 }

@@ -9,7 +9,7 @@
     <string name="Text6">Student Name</string>
     <string name="Btn">ADD</string>
     <string name="Btn1">UPDATE</string>
-    <string name="Btn2">VIEW ALL</string>
+    <string name="Btn2">VIEW</string>
     <string name="Text7">Subject</string>
     <string name="Test8">Grade</string>
     <string name="radio">Mathematics</string>
@@ -20,8 +20,8 @@
     <string name="btnUpdate">UPDATE</string>
     <string name="btnDelete">DELETE</string>
     <string name="Test10">View student details</string>
-    <string name="Text11">Student ID:</string>
-    <string name="Test12">"Student Name: "</string>
+    <string name="Text11">ID:</string>
+    <string name="Test12">"Name: "</string>
     <string name="Test13">"Grade: "</string>
     <string name="Test14">"Subject: "</string>
     <string name="TestHW">Important! Once it is uploaded. It cannot be edited.</string>
@@ -63,6 +63,10 @@
     <string name="btn8">Calculate</string>
     <string name="Text29">TERM REGISTRATION</string>
     <string name="US">Upload Slip</string>
+    <string name="adm1">View Student Details</string>
+    <string name="adm2">View Upload Details</string>
+    <string name="admTitle">Title: </string>
+    <string name="admImg">Image: </string>
 
 
     <string name="Title">Enter the details</string>

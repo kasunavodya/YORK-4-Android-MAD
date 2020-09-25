@@ -2,26 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.york_4_android_app">
 
-
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
-
     <uses-permission android:name="android.permission.CAMERA " />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE " />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE " />
     <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL " />
-
-    <uses-permission android:name="android.permission.CAMERA "/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE "/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE "/>
-    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL "/>
-
+    <uses-permission android:name="android.permission.CAMERA " />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE " />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE " />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL " />
 
     <application
         android:allowBackup="true"
@@ -31,6 +25,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".ViewUploadDetails"/>
+        <activity android:name=".ViewStudentDetails" />
         <activity android:name=".DisplayVideo" />
         <activity android:name=".VideoUploading" />
         <activity android:name=".DisplayNotice" />
@@ -39,11 +35,11 @@
         <activity android:name=".NotesView" />
         <activity android:name=".NotesUpload" />
         <activity android:name=".AdminUpload" />
-        <activity android:name=".Admin_Login"/>
-        <activity android:name=".AddSlip"/>
+        <activity android:name=".Admin_Login" />
+        <activity android:name=".AddSlip" />
         <activity android:name=".MainTermRegister" />
         <activity android:name=".CalculateTF" />
-        <activity android:name=".AddTimetable3"/>
+        <activity android:name=".AddTimetable3" />
         <activity android:name=".AddTimetable2" />
         <activity android:name=".AddTimetable" />
         <activity android:name=".ErrorHW" />

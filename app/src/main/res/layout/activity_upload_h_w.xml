@@ -39,7 +39,7 @@
         android:layout_width="32dp"
         android:layout_height="27dp"
         android:contentDescription="@string/image2"
-        android:src="@drawable/back"
+        android:src="@drawable/prev1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
@@ -48,19 +48,17 @@
         app:layout_constraintVertical_bias="0.022"
         tools:ignore="MissingConstraints" />
 
-    <AutoCompleteTextView
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/autoCompleteTextView"
-        style="@style/uploadDetails"
-        android:layout_width="329dp"
-        android:layout_height="44dp"
-        android:text="@string/Test15"
-        android:textColor="#FFFFFF"
+        android:layout_width="319dp"
+        android:layout_height="47dp"
+        android:hint="Homework Title*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.237" />
+        app:layout_constraintVertical_bias="0.223" />
 
     <Button
         android:id="@+id/buttonHW2"
@@ -219,6 +217,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.839" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

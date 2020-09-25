@@ -6,11 +6,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.ImageView;
-
 import androidx.annotation.Nullable;
 
 public class Database extends SQLiteOpenHelper {
 
+    //Hogwarts School Database
     public static final String DATABASE_NAME = "HogwartsMAD.db";
 
     //Homework table
@@ -23,6 +23,12 @@ public class Database extends SQLiteOpenHelper {
     public static final String TABLE_NAME3 = "time_table";
     //Term Register table
     public static final String TABLE_NAME5 = "Register_table";
+    //Sign up table
+    public static final String TABLE_NAME6 = "signup_table";
+    //Notes Upload table
+    public static final String TABLE_NAME7 = "notes_table";
+    //Video Upload table
+    public static final String TABLE_NAME8 = "video_table";
 
     //homework table columns
     public static final String COL_1 = "ID";
@@ -39,14 +45,6 @@ public class Database extends SQLiteOpenHelper {
     public static final String COLL1 = "ID";
     public static final String COLL2 = "ERROR";
 
-    //Sign up table
-    public static final String TABLE_NAME6 = "signup_table";
-
-    //Notes Upload table
-    public static final String TABLE_NAME7 = "notes_table";
-
-    //Video Upload table
-    public static final String TABLE_NAME8 = "video_table";
     //sign up table columns
     public static final String NAME = "NAME";
     public static final String EMAIL = "EMAIL";
@@ -56,7 +54,7 @@ public class Database extends SQLiteOpenHelper {
     public static final String c1 = "NAME";
     public static final String c2 = "GRADE";
 
-    //videoupload table columns
+    //videoUpload table columns
     public static final String NAME_COL1= "NAME";
     public static final String GRADE_COL2 = "GRADE";
 
@@ -72,9 +70,6 @@ public class Database extends SQLiteOpenHelper {
     public static final String COL_001 = "ID";
     public static final String COL_002 = "NAME";
 
-
-
-
     public Database(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
         // SQLiteDatabase db = this.getWritableDatabase();
@@ -88,8 +83,6 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("create table " + TABLE_NAME2 + " (ID TEXT PRIMARY KEY , ERROR TEXT )");
         db.execSQL("create table " + TABLE_NAME3 + "(ID INTEGER PRIMARY KEY AUTOINCREMENT , sub_name TEXT , start_time INT , end_time INT , venue TEXT , lecture_name TEXT)" );
         db.execSQL("create table " + TABLE_NAME5 + " (ID TEXT PRIMARY KEY , NAME TEXT)");
-
-
         db.execSQL("create table " + TABLE_NAME6 + " (ID TEXT PRIMARY KEY , NAME TEXT, EMAIL TEXT, PASSOWRD TEXT)");
         db.execSQL("create table " + TABLE_NAME7 + " (ID TEXT PRIMARY KEY , NAME TEXT, GRADE INTEGER)");
         db.execSQL("create table " + TABLE_NAME8 + " (ID TEXT PRIMARY KEY , NAME TEXT, GRADE INTEGER)");
@@ -130,12 +123,14 @@ public class Database extends SQLiteOpenHelper {
             return true;
     }
 
+    //get student data
     public Cursor getAllData(){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from "+TABLE_NAME, null);
         return res;
     }
 
+    //update student data
     public boolean updateData (String id, String name, String grade, String subject) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -147,6 +142,7 @@ public class Database extends SQLiteOpenHelper {
         return true;
     }
 
+    //delete student data
     public Integer deleteData (String id){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME, "ID = ?", new String[] { id });
@@ -170,12 +166,14 @@ public class Database extends SQLiteOpenHelper {
             return true;
     }
 
+    //get UploadHwImage data
     public Cursor getImageData(){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from "+TABLE_NAME1, null);
         return res;
     }
 
+    //update UploadHwImage data
     public boolean updateImgData (String id, String title, ImageView image) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -186,6 +184,7 @@ public class Database extends SQLiteOpenHelper {
         return true;
     }
 
+    //delete UploadHwImage data
     public Integer deleteImgData (String id){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME1, "ID = ?", new String[] { id });
@@ -208,11 +207,9 @@ public class Database extends SQLiteOpenHelper {
             return true;
     }
 
-
     //----------------------------------------------------------------------------
 
     //Insert timetable data
-
     public boolean insertTimetableData (String sub_name , String start_time , String end_time , String venue , String lecture_name ) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues(  );
@@ -229,11 +226,15 @@ public class Database extends SQLiteOpenHelper {
         else
             return true;
     }
+
+    //get timetable data
     public Cursor getAllTimetableData() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor res = sqLiteDatabase.rawQuery( "select * from " +TABLE_NAME3, null );
         return res;
     }
+
+    //update timetable data
     public boolean updateTimetableData (String sub_id , String sub_name , String start_time , String end_time , String venue , String lecture_name ) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues(  );
@@ -247,20 +248,22 @@ public class Database extends SQLiteOpenHelper {
         return true;
     }
 
+    //delete timetable data
     public Integer deleteTimetableData (String sub_id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         return sqLiteDatabase.delete( TABLE_NAME3, "ID = ? " , new String[] { sub_id} );
     }
 
-    //Insert registration data
+    //----------------------------------------------------------------------------
 
+    //Insert registration data
     public boolean insertRegData (String id, String name) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
         contentValues.put(COL_001,id);
         contentValues.put(COL_002,name);
-        long result = db.insert(TABLE_NAME,null, contentValues);
+        long result = db.insert(TABLE_NAME5,null, contentValues);
 
         if(result == -1)
             return false;
@@ -268,7 +271,7 @@ public class Database extends SQLiteOpenHelper {
             return true;
     }
 
-
+    //----------------------------------------------------------------------------
 
     //insert admin data
     public boolean insertDataAdmin ( String name, String email, String password) {
@@ -286,12 +289,13 @@ public class Database extends SQLiteOpenHelper {
             return true;
     }
 
-
+    //delete admin data
     public Integer deleteDataAdmin (String name){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME6, "NAME = ?", new String[] { name });
     }
 
+    //----------------------------------------------------------------------------
 
     //insert notes upload data
     public boolean insertToNotes ( String name, String grade) {
@@ -308,13 +312,13 @@ public class Database extends SQLiteOpenHelper {
             return true;
     }
 
-
-
+    //delete notes upload data
     public Integer deleteNote(String grade){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME7, "grade = ?", new String[] { grade});
     }
 
+    //insert video upload data
     public boolean insertVideoTable(String name, String grade){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -329,12 +333,10 @@ public class Database extends SQLiteOpenHelper {
             return true;
     }
 
-
+    //delete video upload data
     public Integer deleteVideo(String grade){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME8, "grade = ?", new String[] { grade});
     }
-
-
 
 }

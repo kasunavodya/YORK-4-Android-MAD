@@ -2,32 +2,26 @@ package com.example.york_4_android_app;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.Arrays;
-
-//import java.util.Arrays;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class UploadHW extends AppCompatActivity {
     Database myDb1;
     ImageView imageView;
     Integer REQUEST_CAMERA = 1, SELECT_FILE = 0;
-    AutoCompleteTextView Title;
+    TextInputEditText Title;
     Button UploadBtn, ViewBtn, DeleteBtn, UpdateBtn;
     TextView editId, editName;
 
@@ -40,7 +34,7 @@ public class UploadHW extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.imageView);
         editId = (TextView) findViewById(R.id.textViewID);
         editName = (TextView) findViewById(R.id.textViewStName);
-        Title = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView);
+        Title = (TextInputEditText) findViewById(R.id.autoCompleteTextView);
         UploadBtn = (Button) findViewById(R.id.buttonHW2);
         DeleteBtn = (Button) findViewById(R.id.button8);
         UpdateBtn = (Button) findViewById(R.id.button3);
@@ -53,7 +47,6 @@ public class UploadHW extends AppCompatActivity {
         editId.setText(id);
         editName.setText(name);
         AddData1();
-        viewAllImage();
         UpdateData();
         DeleteImgData();
 
@@ -88,6 +81,24 @@ public class UploadHW extends AppCompatActivity {
                 Intent activityIntent = new Intent(UploadHW.this, ErrorHW.class);
                 activityIntent.putExtra("editId", id);
                 activityIntent.putExtra("editName", name);
+                UploadHW.this.startActivity(activityIntent);
+
+            }
+        });
+
+        ViewBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                final String id = editId.getText().toString();
+                final String name = editName.getText().toString();
+                final String title = Title.getText().toString();
+
+                Intent activityIntent = new Intent(UploadHW.this, ViewUploadDetails.class);
+                activityIntent.putExtra("editId", id);
+                activityIntent.putExtra("editName", name);
+                activityIntent.putExtra("Title", title);
                 UploadHW.this.startActivity(activityIntent);
 
             }
@@ -149,56 +160,20 @@ public class UploadHW extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        boolean isInserted = myDb1.insertDetails(editId.getText().toString(),Title.getText().toString(), imageView);
-                        if(isInserted == true)
-                            Toast.makeText(UploadHW.this, "Uploaded Successfully", Toast.LENGTH_LONG).show();
-                        else
-                            Toast.makeText(UploadHW.this, "Uploaded not successfully!!", Toast.LENGTH_LONG).show();
+                        if (Title.getText().toString().length() == 0) {
+                            Title.setError("Title is required!");
+
+                        } else {
+
+                            boolean isInserted = myDb1.insertDetails(editId.getText().toString(), Title.getText().toString(), imageView);
+                            if (isInserted == true)
+                                Toast.makeText(UploadHW.this, "Uploaded Successfully", Toast.LENGTH_LONG).show();
+                            else
+                                Toast.makeText(UploadHW.this, "Uploaded not successfully!!", Toast.LENGTH_LONG).show();
+                        }
                     }
                 }
         );
-    }
-
-    public void viewAllImage(){
-
-        ViewBtn.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v) {
-                        Cursor res = myDb1.getImageData();
-                        if (res.getCount() == 0) {
-                            //show message
-                            showMessage("Error", "Nothing found");
-                            return;
-                        }
-
-                        StringBuffer buffer = new StringBuffer();
-                        while (res.moveToNext()) {
-
-                            buffer.append("ID: " + res.getString(0) + "\n");
-                            buffer.append("Title: " + res.getString(1) + "\n");
-                            buffer.append("Image: " + res.getBlob(2) + "\n\n");
-
-
-                        }
-
-                        //show all data
-                        showMessage("View Homework Data", buffer.toString());
-                    }
-                }
-        );
-
-    }
-
-    public void showMessage(String title, String Message){
-
-        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setIcon(R.drawable.hogw);
-        builder.setMessage(Message);
-        builder.show();
-
     }
 
     public void DeleteImgData(){
