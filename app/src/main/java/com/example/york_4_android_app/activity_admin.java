@@ -20,7 +20,7 @@ public class activity_admin extends AppCompatActivity {
         myDb1 = new Database(this);
 
         final Button TimetableBtn = (Button) findViewById(R.id.button);
-        final Button UploadBtn = (Button) findViewById(R.id.button);
+        final Button UploadBtn = (Button) findViewById(R.id.button2);
         ViewAdmin = (TextView) findViewById(R.id.studentDetailsShow);
         ViewAdmin1 = (TextView) findViewById(R.id.studentDetailsShow2);
         viewAll();
@@ -41,7 +41,7 @@ public class activity_admin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent activityIntent = new Intent(activity_admin.this, AddTimetable.class);
+                Intent activityIntent = new Intent(activity_admin.this, AdminUpload.class);
                 activity_admin.this.startActivity(activityIntent);
             }
         });
