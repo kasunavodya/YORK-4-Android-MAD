@@ -38,7 +38,7 @@ public class SignUp extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        Intent intent = new Intent(SignUp.this,AdminHome.class);
+                        Intent intent = new Intent(SignUp.this,activity_admin.class);
                         startActivity(intent);
 
                         boolean isInserted = mydb1.insertDataAdmin(name.getText().toString(),

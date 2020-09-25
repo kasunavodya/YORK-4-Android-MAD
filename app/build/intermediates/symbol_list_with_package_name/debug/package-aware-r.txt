@@ -676,6 +676,10 @@ attr rippleColor
 attr round
 attr roundPercent
 attr saturation
+attr sb_handlerColor
+attr sb_horizontal
+attr sb_indicatorColor
+attr sb_indicatorTextColor
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -1068,6 +1072,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color notification_material_background_media_default_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1428,6 +1433,10 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
 dimen test_mtrl_calendar_day_cornerSize
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
@@ -1527,6 +1536,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable back
 drawable back3
+drawable background
 drawable backstu
 drawable bar
 drawable bg
@@ -1538,10 +1548,16 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable buttons
 drawable close
 drawable cust1_button
 drawable cust_button
 drawable cust_delete_btn
+drawable default_scroll_handle_bottom
+drawable default_scroll_handle_left
+drawable default_scroll_handle_right
+drawable default_scroll_handle_top
+drawable delete_btn
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1555,12 +1571,18 @@ drawable h5
 drawable hogw
 drawable home1
 drawable home2
+drawable ic_baseline_android_24
+drawable ic_baseline_lock_24
+drawable ic_baseline_message_24
+drawable ic_baseline_note_add_24
+drawable ic_baseline_personal_video_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable log
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
 drawable material_ic_edit_black_24dp
@@ -1568,6 +1590,7 @@ drawable material_ic_keyboard_arrow_left_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable mini_buttons
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1593,10 +1616,14 @@ drawable notify_panel_notification_icon_bg
 drawable oo
 drawable pp
 drawable qq
+drawable rounded_corners
 drawable search
 drawable test_custom_background
+drawable timetable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable update_btn
+drawable uploads
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1649,6 +1676,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id action0
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1692,6 +1720,10 @@ id bounce
 id btn
 id btn1
 id btn2
+id btnDelete
+id btnUpdate
+id btnUpload
+id btnView
 id btone
 id btone2
 id btone3
@@ -1700,8 +1732,14 @@ id btone5
 id btone6
 id btone7
 id button
+id button10
+id button11
 id button2
 id button3
+id button4
+id button5
+id button6
+id button7
 id button8
 id button9
 id buttonError
@@ -1713,6 +1751,7 @@ id button_delete
 id button_update
 id button_viewAll
 id cameraBtn
+id cancel_action
 id cancel_button
 id center
 id center_horizontal
@@ -1759,6 +1798,7 @@ id direct
 id disableHome
 id disablePostScroll
 id disableScroll
+id displayImageView
 id divider
 id dragDown
 id dragEnd
@@ -1770,6 +1810,9 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
+id editTextNumber
+id editTextTextPassword
+id editTextTextPassword2
 id editTextTextPersonName
 id editTextTextPersonName2
 id editTextTextPersonName3
@@ -1781,6 +1824,7 @@ id editTextTextPersonNameID2
 id editTextTextPersonNameID3
 id edit_query
 id end
+id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -1797,9 +1841,12 @@ id flip
 id floating
 id floatingActionButton
 id forever
+id galleryBtn
 id ghost_view
 id ghost_view_holder
 id gone
+id grade
+id gradeDisplay
 id graph
 id graph_wrap
 id group_divider
@@ -1817,6 +1864,7 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageViewDisplayed
 id imageViewHogwarts
 id imageViewHogwarts1
 id imageViewHogwarts3
@@ -1829,6 +1877,7 @@ id jumpToStart
 id labeled
 id largeLabel
 id layout
+id lectureName
 id left
 id line1
 id line3
@@ -1836,6 +1885,7 @@ id linear
 id listMode
 id list_item
 id masked
+id media_actions
 id message
 id middle
 id mini
@@ -1868,12 +1918,14 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id nameDisplay
 id nameTxt
 id navigation_header_container
 id never
 id noScroll
 id none
 id normal
+id notesTitle
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -1889,6 +1941,7 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id pdfViewer
 id peekHeight
 id percent
 id pin
@@ -1933,6 +1986,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id sendImagebtn
 id shortcut
 id showCustom
 id showHome
@@ -1960,6 +2014,7 @@ id startHorizontal
 id startVertical
 id staticLayout
 id staticPostLayout
+id status_bar_latest_event_content
 id stop
 id stretch
 id studentDetailsShow
@@ -1988,6 +2043,7 @@ id textView
 id textView2
 id textView3
 id textView5
+id textView7
 id textViewDetail2
 id textViewError
 id textViewID
@@ -2005,10 +2061,15 @@ id textinput_prefix_text
 id textinput_suffix_text
 id time
 id title
+id title3
 id titleDividerNoCustom
 id title_template
+id toContinue
 id toggle
 id toolbar
+id toolbar1
+id toolbar3
+id toolbar4
 id top
 id topPanel
 id touch_outside
@@ -2035,6 +2096,7 @@ id up
 id useLogo
 id view_offset_helper
 id visible
+id webview1
 id withText
 id withinBounds
 id wrap
@@ -2105,14 +2167,23 @@ layout activity_add_timetable
 layout activity_add_timetable2
 layout activity_add_timetable3
 layout activity_admin
+layout activity_admin_upload
 layout activity_calculate_t_f
+layout activity_display_notice
+layout activity_display_video
 layout activity_enter_details
 layout activity_error_h_w
 layout activity_home_page
 layout activity_main
 layout activity_main_term_register
+layout activity_notes_upload
+layout activity_notes_view
+layout activity_notice_upload
+layout activity_sign_up
 layout activity_student
 layout activity_upload_h_w
+layout activity_video_uploading
+layout admin_login
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2159,8 +2230,17 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout notification_action
 layout notification_action_tombstone
+layout notification_media_action
+layout notification_media_cancel_action
+layout notification_template_big_media
+layout notification_template_big_media_custom
+layout notification_template_big_media_narrow
+layout notification_template_big_media_narrow_custom
 layout notification_template_custom_big
 layout notification_template_icon_group
+layout notification_template_lines_media
+layout notification_template_media
+layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout select_dialog_item_material
@@ -2225,6 +2305,8 @@ string Text4
 string Text5
 string Text6
 string Text7
+string Title
+string Topic
 string US
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -2331,6 +2413,9 @@ string search_menu_title
 string status_bar_notification_info_overflow
 string textyork
 string title
+string title1
+string title3
+string title4
 string txtH
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -2684,9 +2769,14 @@ style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
+style TextAppearance_Compat_Notification_Info_Media
 style TextAppearance_Compat_Notification_Line2
+style TextAppearance_Compat_Notification_Line2_Media
+style TextAppearance_Compat_Notification_Media
 style TextAppearance_Compat_Notification_Time
+style TextAppearance_Compat_Notification_Time_Media
 style TextAppearance_Compat_Notification_Title
+style TextAppearance_Compat_Notification_Title_Media
 style TextAppearance_Design_CollapsingToolbar_Expanded
 style TextAppearance_Design_Counter
 style TextAppearance_Design_Counter_Overflow
@@ -3127,6 +3217,7 @@ styleable RangeSlider values
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable ScrimInsetsFrameLayout insetForeground
+styleable ScrollBar sb_handlerColor sb_horizontal sb_indicatorColor sb_indicatorTextColor
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
@@ -3156,6 +3247,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml file_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start
