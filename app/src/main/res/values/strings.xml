@@ -67,6 +67,8 @@
     <string name="adm2">View Upload Details</string>
     <string name="admTitle">Title: </string>
     <string name="admImg">Image: </string>
+    <string name="admtable">View Weekday Timetable </string>
+    <string name="admtable1">View Weekend Timetable</string>
 
 
     <string name="Title">Enter the details</string>

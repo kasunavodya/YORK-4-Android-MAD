@@ -35,7 +35,6 @@ public class AddTimeTable5 extends AppCompatActivity {
         btnviewUpdate = (Button ) findViewById( R.id.button13 );
         btnDelete = (Button ) findViewById( R.id.button14 );
         AddData1();
-        viewAll();
         UpdateData1();
         DeleteData1();
 
@@ -89,41 +88,6 @@ public class AddTimeTable5 extends AppCompatActivity {
                     }
                 }
         );
-    }
-
-    public void viewAll() {
-        btnviewAll.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Cursor res = myDb1.getAllData1();
-                        if(res.getCount() == 0 ){
-                            //Show detail meaasge
-                            showMessage( "Error" , "No data found" );
-                            return;
-                        }
-                        StringBuffer buffer = new StringBuffer(  );
-                        while (res.moveToNext()) {
-                            buffer.append(  "ID : " +res.getString( 0 ) +"\n");
-                            buffer.append(  "Sub_Name : " +res.getString( 1 ) +"\n");
-                            buffer.append(  "Start_Time : " +res.getString( 2 ) +"\n");
-                            buffer.append(  "End_Time : " +res.getString( 3 ) +"\n");
-                            buffer.append(  "Lecture_Name : " +res.getString( 4 ) +"\n");
-
-
-                        }
-                        showMessage( "Data" , buffer.toString() );
-                    }
-                }
-        );
-    }
-
-    public void showMessage (String title , String Message) {
-        AlertDialog.Builder builder = new AlertDialog.Builder( this );
-        builder.setCancelable( true );
-        builder.setTitle( title );
-        builder.setMessage( Message );
-        builder.show();
     }
 
 }

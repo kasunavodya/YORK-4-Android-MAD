@@ -24,8 +24,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".AddTimeTable5"/>
+        <activity android:name=".ViewAdminWeekday"></activity>
+        <activity android:name=".AddTimeTable5" />
         <activity android:name=".AddTimeTable4" />
         <activity android:name=".ViewUploadDetails" />
         <activity android:name=".ViewStudentDetails" />
@@ -51,7 +51,6 @@
         <activity android:name=".activity_admin" />
         <activity android:name=".activity_student" />
         <activity android:name=".HomePage">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
