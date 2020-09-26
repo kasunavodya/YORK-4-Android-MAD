@@ -29,6 +29,16 @@
         <item name = "android:textSize">20sp</item>
     </style>
 
+    <style name = "enterDetails5">
+        <item name = "android:textColor">@color/grey</item>
+        <item name = "android:textStyle">bold|italic</item>
+        <item name = "android:inputType">textPersonName</item>
+        <item name = "android:layout_width">277dp</item>
+        <item name = "android:layout_height">52dp</item>
+        <item name = "android:ems">10</item>
+        <item name = "android:textSize">20sp</item>
+    </style>
+
     <style name = "enterDetails2">
         <item name = "android:textColor">@color/grey</item>
         <item name = "android:textStyle">bold|italic</item>

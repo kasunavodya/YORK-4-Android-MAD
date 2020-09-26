@@ -17,7 +17,7 @@ public class NotesView extends AppCompatActivity {
         setContentView(R.layout.activity_notes_view);
 
         pdfView=(PDFView)findViewById(R.id.pdfViewer);
-        pdfView.fromAsset("grade9");
+        pdfView.fromAsset("grade9").load();
 
     }
 

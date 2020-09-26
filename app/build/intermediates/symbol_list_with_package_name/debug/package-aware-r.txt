@@ -1615,6 +1615,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable oo
 drawable pp
+drawable prev1
 drawable qq
 drawable rounded_corners
 drawable search
@@ -1629,7 +1630,9 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id ChkBx1
+id End_Time
 id FUNCTION
+id Lec_Name
 id META
 id NO_DEBUG
 id SHIFT
@@ -1638,10 +1641,14 @@ id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
 id Sid
+id Start_Time
+id Sub_ID
+id Sub_Name
 id TOP_END
 id TOP_START
 id TextError
 id TextInputType
+id Zoom
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1734,6 +1741,8 @@ id btone7
 id button
 id button10
 id button11
+id button13
+id button14
 id button2
 id button3
 id button4
@@ -1864,6 +1873,7 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageView4
 id imageViewDisplayed
 id imageViewHogwarts
 id imageViewHogwarts1
@@ -2018,6 +2028,7 @@ id status_bar_latest_event_content
 id stop
 id stretch
 id studentDetailsShow
+id studentDetailsShow2
 id submenuarrow
 id submit_area
 id tabMode
@@ -2046,8 +2057,18 @@ id textView5
 id textView7
 id textViewDetail2
 id textViewError
+id textViewGrade
+id textViewGradeLabel1
 id textViewID
+id textViewIDLabel1
+id textViewIName
+id textViewImageLabel1
+id textViewNameLabel1
 id textViewStName
+id textViewSub
+id textViewSubjectLabel1
+id textViewTitleLabel1
+id textVw
 id textVw1
 id textVw2
 id textVwDetail
@@ -2163,6 +2184,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_slip
+layout activity_add_time_table4
+layout activity_add_time_table5
 layout activity_add_timetable
 layout activity_add_timetable2
 layout activity_add_timetable3
@@ -2183,6 +2206,8 @@ layout activity_sign_up
 layout activity_student
 layout activity_upload_h_w
 layout activity_video_uploading
+layout activity_view_student_details
+layout activity_view_upload_details
 layout admin_login
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2335,6 +2360,10 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string adm1
+string adm2
+string admImg
+string admTitle
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -3118,6 +3147,7 @@ style Widget_Support_CoordinatorLayout
 style enterDetails
 style enterDetails1
 style enterDetails2
+style enterDetails5
 style updateDetails
 style updateDetails1
 style updateDetails2

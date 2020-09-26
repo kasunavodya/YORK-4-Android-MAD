@@ -59,14 +59,14 @@
         android:id="@+id/button3"
         android:layout_width="273dp"
         android:layout_height="114dp"
-        android:background="@drawable/rounded_corners"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:textSize="25dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="314dp"
+        android:background="@drawable/rounded_corners"
         android:drawableRight="@drawable/ic_baseline_message_24"
-        android:layout_marginTop="324dp"
-        android:text="NOTICES" />
+        android:text="NOTICES"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button4"
@@ -76,10 +76,10 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="75dp"
-        android:layout_marginBottom="81dp"
+        android:layout_marginBottom="112dp"
         android:background="@drawable/rounded_corners"
-        android:text="LECTURE CAPTURES"
         android:drawableRight="@drawable/ic_baseline_personal_video_24"
+        android:text="LECTURE CAPTURES"
         android:textSize="25dp"
         android:textStyle="bold" />
 </RelativeLayout>

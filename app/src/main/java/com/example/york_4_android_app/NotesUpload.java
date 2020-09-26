@@ -25,6 +25,13 @@ public class NotesUpload extends AppCompatActivity {
         delete_btn = (Button)findViewById(R.id.button6);
         view_btn= (Button)findViewById(R.id.button5);
         uploadPDF=(Button) findViewById(R.id.button7);
+        uploadPDF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),NotesView.class);
+                startActivity(intent);
+            }
+        });
         AddData();
         DeleteData();
     }
@@ -33,17 +40,12 @@ public class NotesUpload extends AppCompatActivity {
         uploadPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                boolean isInserted = mydb1.insertToNotes(name.getText().toString(), grade.getText().toString());
+                  boolean isInserted = mydb1.insertToNotes(name.getText().toString(), grade.getText().toString());
 
                 if(isInserted == true)
                     Toast.makeText(NotesUpload.this, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
                 else
                     Toast.makeText(NotesUpload.this, "Data not Inserted!!", Toast.LENGTH_LONG).show();
-
-                Intent intent = new Intent(NotesUpload.this,NotesView.class);
-                startActivity(intent);
-
 
 
             }

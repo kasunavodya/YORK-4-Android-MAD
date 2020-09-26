@@ -4,6 +4,10 @@
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\layout\\activity_notice_upload.xml"
     },
     {
+        "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_prev1.png.flat",
+        "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\prev1.png"
+    },
+    {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_enter_details.xml.flat",
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\layout\\activity_enter_details.xml"
     },
@@ -14,6 +18,10 @@
     {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable_home2.jpg.flat",
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\drawable\\home2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_prev1.xml.flat",
+        "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\prev1.xml"
     },
     {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
@@ -88,8 +96,16 @@
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\layout\\activity_upload_h_w.xml"
     },
     {
+        "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_time_table4.xml.flat",
+        "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\layout\\activity_add_time_table4.xml"
+    },
+    {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bg.jpg.flat",
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\drawable-v24\\bg.jpg"
+    },
+    {
+        "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_prev1.png.flat",
+        "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\prev1.png"
     },
     {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_log.png.flat",
@@ -114,6 +130,10 @@
     {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_qq.jpg.flat",
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\drawable-v24\\qq.jpg"
+    },
+    {
+        "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_view_student_details.xml.flat",
+        "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\layout\\activity_view_student_details.xml"
     },
     {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
@@ -200,6 +220,10 @@
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\drawable-v24\\search.xml"
     },
     {
+        "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_time_table5.xml.flat",
+        "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\layout\\activity_add_time_table5.xml"
+    },
+    {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
@@ -256,12 +280,20 @@
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\drawable-v24\\delete_btn.xml"
     },
     {
+        "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_prev1.png.flat",
+        "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\prev1.png"
+    },
+    {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_cust1_button.xml.flat",
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\drawable-v24\\cust1_button.xml"
     },
     {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_view_upload_details.xml.flat",
+        "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\layout\\activity_view_upload_details.xml"
     },
     {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_forward.xml.flat",
@@ -280,8 +312,16 @@
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\src\\main\\res\\drawable-v24\\bar.xml"
     },
     {
+        "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_prev1.png.flat",
+        "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\prev1.png"
+    },
+    {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_prev1.png.flat",
+        "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\prev1.png"
     },
     {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_uploads.png.flat",
@@ -302,6 +342,10 @@
     {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_prev1.png.flat",
+        "source": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\prev1.png"
     },
     {
         "merged": "C:\\Users\\49176\\Desktop\\YORK-4-Android-MAD\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main_term_register.xml.flat",
