@@ -1,22 +1,17 @@
 package com.example.york_4_android_app;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CalculateTF extends AppCompatActivity {
-    Button add;
+    Button add, clear;
     TextView answer;
-
-    CheckBox checkBox1, checkBox2;
-    private int RegularFee = 30000;
-    private int LibraryFee = 2000;
-    private int ShuttleFee = 5000;
-    private int Sum;
+    CheckBox checkBox1, checkBox2, checkBox3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,47 +19,63 @@ public class CalculateTF extends AppCompatActivity {
         setContentView(R.layout.activity_calculate_t_f);
 
         add = findViewById(R.id.btn);
-        checkBox1 = findViewById(R.id.chb1);
-        checkBox1 = findViewById(R.id.chb2);
+        clear = findViewById(R.id.clearBtn);
+        checkBox1 = findViewById(R.id.ChkBx1);
+        checkBox2 = findViewById(R.id.chb1);
+        checkBox3 = findViewById(R.id.chb2);
         answer = findViewById(R.id.result);
     }
 
     public void ClickMe(View v) {
-        if(checkBox1.isChecked() == true){
 
+        add.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View v) {
 
-            add.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View view) {
-                    Sum = RegularFee + LibraryFee;
-                    answer.setText("Rs. "+ String.valueOf(Sum));
+                if (checkBox1.isChecked() && !checkBox2.isChecked() && !checkBox3.isChecked()) {
+                    answer.setText("Rs: " + 30000);
                 }
-            });
-        }
 
-        else if(checkBox1.isChecked() == true) {
-
-            add.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Sum = RegularFee + ShuttleFee;
-                    answer.setText("Rs. " + String.valueOf(Sum));
+                else if (checkBox2.isChecked() && !checkBox1.isChecked() && !checkBox3.isChecked()) {
+                    answer.setText("Rs: " + 2000);
                 }
-            });
-        }
 
-        else if(checkBox1.isChecked() == true && checkBox2.isChecked() == true){
-
-            add.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View view) {
-                    Sum = RegularFee + LibraryFee + ShuttleFee;
-                    answer.setText("Rs. "+ String.valueOf(Sum));
+                else if (checkBox3.isChecked() && !checkBox1.isChecked() && !checkBox2.isChecked()) {
+                    answer.setText("Rs: " + 5000);
                 }
-            });
-        }
-        else {
-            answer.setText("Rs. "+ String.valueOf(RegularFee));
-        }
+
+                else if (checkBox1.isChecked() && checkBox2.isChecked() && !checkBox3.isChecked()) {
+                    answer.setText("Rs: " + 32000);
+                }
+
+                else if (checkBox1.isChecked() && checkBox3.isChecked() && !checkBox2.isChecked()) {
+                    answer.setText("Rs: " + 35000);
+                }
+
+                else if (checkBox2.isChecked() && checkBox3.isChecked() && !checkBox1.isChecked()) {
+                    answer.setText("Rs: " + 7000);
+                }
+
+                else if (checkBox1.isChecked() && checkBox2.isChecked() && checkBox3.isChecked()) {
+                    answer.setText("Rs: " + 37000);
+                }
+
+                else {
+                    answer.setText("Rs: " + 0);
+                }
+            }
+        });
+
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkBox1.setChecked(false);
+                checkBox2.setChecked(false);
+                checkBox3.setChecked(false);
+                answer.setText("");
+            }
+        });
+
     }
 }

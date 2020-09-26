@@ -12,15 +12,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
-
 import com.google.android.material.textfield.TextInputEditText;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -30,7 +27,7 @@ public class MainTermRegister extends AppCompatActivity {
     public static final int CAMERA_PERMISSION_CODE = 101;
     public static final int CAMERA_REQUEST = 102;
     Database myDb1;
-    Button RegBtnAddData;
+    Button RegBtnAddData, ResetBtn;
     ImageButton camera;
     TextInputEditText name, id;
     TextView UploadHereBtn;
@@ -47,6 +44,7 @@ public class MainTermRegister extends AppCompatActivity {
         final TextView LinkBtn = (TextView) findViewById(R.id.txtV3);
         final TextView LinkBtn1 = (TextView) findViewById(R.id.txtV8);
         RegBtnAddData = (Button) findViewById(R.id.button3);
+        ResetBtn = findViewById(R.id.button);
         camera = (ImageButton)findViewById(R.id.cameraBtn);
         name = (TextInputEditText) findViewById(R.id.nameTxt);
         id = (TextInputEditText) findViewById(R.id.Sid);
@@ -77,6 +75,15 @@ public class MainTermRegister extends AppCompatActivity {
 
                 Intent activityIntent = new Intent(MainTermRegister.this, AddSlip.class);
                 MainTermRegister.this.startActivity(activityIntent);
+
+            }
+        });
+
+        ResetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                name.setText("");
+                id.setText("");
 
             }
         });
@@ -162,16 +169,6 @@ public class MainTermRegister extends AppCompatActivity {
         }
     }
 
-
-
-    public void Reset(View view) {
-        nameTxt = " ";
-        Sid = " ";
-        displayForNameTxt(String.valueOf(0));
-        displayForSid(String.valueOf(0));
-
-    }
-
     private void displayForSid(String i) {
         displayForNameTxt(nameTxt);
     }
@@ -179,5 +176,3 @@ public class MainTermRegister extends AppCompatActivity {
         displayForNameTxt(Sid);
     }
 }
-
-
