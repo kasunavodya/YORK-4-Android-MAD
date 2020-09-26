@@ -21,6 +21,8 @@ public class Database extends SQLiteOpenHelper {
     public static final String TABLE_NAME2 = "UploadError";
     //HomeworkError table
     public static final String TABLE_NAME3 = "time_table";
+    //Timetable2 table
+    public static final String TABLE_NAME4 = "time_table2";
     //Term Register table
     public static final String TABLE_NAME5 = "Register_table";
     //Sign up table
@@ -66,6 +68,13 @@ public class Database extends SQLiteOpenHelper {
     public static final String COL_05 = "venue";
     public static final String COL_06 = "lecture_name";
 
+    //timetable-weekend table columns
+    public static final String COLll_1 = "ID";
+    public static final String COLll_2 = "sub_name";
+    public static final String COLll_3 = "start_time";
+    public static final String COLll_4= "end_time";
+    public static final String COLll_5 = "lecture_name";
+
     //Term Register table columns
     public static final String COL_001 = "ID";
     public static final String COL_002 = "NAME";
@@ -82,11 +91,11 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("create table " + TABLE_NAME1 + " (ID TEXT PRIMARY KEY , TITLE TEXT, IMAGE BLOB NOT NULL )");
         db.execSQL("create table " + TABLE_NAME2 + " (ID TEXT PRIMARY KEY , ERROR TEXT )");
         db.execSQL("create table " + TABLE_NAME3 + "(ID INTEGER PRIMARY KEY AUTOINCREMENT , sub_name TEXT , start_time INT , end_time INT , venue TEXT , lecture_name TEXT)" );
+        db.execSQL("create table " + TABLE_NAME4 + "(ID INTEGER PRIMARY KEY AUTOINCREMENT , sub_name TEXT , start_time INT , end_time INT , lecture_name TEXT)" );
         db.execSQL("create table " + TABLE_NAME5 + " (ID TEXT PRIMARY KEY , NAME TEXT)");
         db.execSQL("create table " + TABLE_NAME6 + " (ID TEXT PRIMARY KEY , NAME TEXT, EMAIL TEXT, PASSOWRD TEXT)");
         db.execSQL("create table " + TABLE_NAME7 + " (ID TEXT PRIMARY KEY , NAME TEXT, GRADE INTEGER)");
         db.execSQL("create table " + TABLE_NAME8 + " (ID TEXT PRIMARY KEY , NAME TEXT, GRADE INTEGER)");
-
 
     }
 
@@ -96,6 +105,7 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME1);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME3);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME4);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME5);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME6);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME7);
@@ -252,6 +262,48 @@ public class Database extends SQLiteOpenHelper {
     public Integer deleteTimetableData (String sub_id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         return sqLiteDatabase.delete( TABLE_NAME3, "ID = ? " , new String[] { sub_id} );
+    }
+
+    //---------------------------------------------------------------------------
+
+    public boolean insertData1 (String Sub_Name , String Start_Time , String End_Time  , String Lecture_Name ) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues(  );
+        contentValues.put ( COLll_2 , Sub_Name );
+        contentValues.put ( COLll_3 , Start_Time );
+        contentValues.put ( COLll_4 , End_Time );
+        contentValues.put ( COLll_5 , Lecture_Name );
+
+
+        long result = sqLiteDatabase.insert( TABLE_NAME4 , null ,contentValues );
+        if ( result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public Cursor getAllData1( ) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor res = sqLiteDatabase.rawQuery( "select * from " +TABLE_NAME4, null );
+        return res;
+    }
+    public boolean updateData1 (String Sub_Id , String Sub_Name , String Start_Time , String End_Time  , String Lecture_Name ) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues(  );
+        contentValues.put ( COLll_1 , Sub_Id );
+        contentValues.put ( COLll_2 , Sub_Name );
+        contentValues.put ( COLll_3 , Start_Time );
+        contentValues.put ( COLll_4 , End_Time );
+        contentValues.put ( COLll_5 , Lecture_Name );
+
+        sqLiteDatabase.update ( TABLE_NAME4 , contentValues , " ID = ? ", new String[] { Sub_Id } );
+        return true;
+    }
+
+
+    public Integer deleteData1 (String Sub_Id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        return sqLiteDatabase.delete( TABLE_NAME4, "ID = ? " , new String[] { Sub_Id} );
     }
 
     //----------------------------------------------------------------------------

@@ -132,7 +132,7 @@
         android:layout_width="190dp"
         android:layout_height="34dp"
         android:textAlignment="gravity"
-        android:textColor="#981C1C"
+        android:textColor="#1FA827"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"

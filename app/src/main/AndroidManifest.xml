@@ -25,7 +25,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ViewUploadDetails"/>
+        <activity android:name=".AddTimeTable5"/>
+        <activity android:name=".AddTimeTable4" />
+        <activity android:name=".ViewUploadDetails" />
         <activity android:name=".ViewStudentDetails" />
         <activity android:name=".DisplayVideo" />
         <activity android:name=".VideoUploading" />

@@ -1,7 +1,6 @@
 package com.example.york_4_android_app;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-
 import com.google.android.material.textfield.TextInputEditText;
 
 public class EnterDetails extends AppCompatActivity {

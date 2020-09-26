@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 public class ViewUploadDetails extends AppCompatActivity {
     Database myDb1;
-    TextView editId, editName, Title ;
+    TextView editId, editName, Title, imageText ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,12 +17,18 @@ public class ViewUploadDetails extends AppCompatActivity {
         editId = (TextView) findViewById(R.id.textViewIDLabel1);
         editName = (TextView) findViewById(R.id.textViewNameLabel1);
         Title = (TextView) findViewById(R.id.textViewTitleLabel1);
+        imageText = (TextView) findViewById(R.id.textViewImageLabel1);
 
         final String id = getIntent().getStringExtra("editId");
         final String name = getIntent().getStringExtra("editName");
         final String title = getIntent().getStringExtra("Title");
 
         editId.setText(id);
+
+        if (id != " ") {
+            imageText.setText("Image Uploaded !!");
+        }
+
         editName.setText(name);
         Title.setText(title);
 
