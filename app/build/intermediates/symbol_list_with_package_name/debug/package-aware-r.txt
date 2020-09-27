@@ -1761,6 +1761,8 @@ id button_add
 id button_delete
 id button_update
 id button_viewAll
+id buttondelete
+id buttonslip
 id cameraBtn
 id cancel_action
 id cancel_button

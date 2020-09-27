@@ -1,10 +1,8 @@
-//IT19146652
-//V.W.A.N.R. Wickramasinghe
-
 package com.example.york_4_android_app;
 
-import android.app.Activity;
-import android.app.Instrumentation;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.test.rule.ActivityTestRule;
 
@@ -13,41 +11,34 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
-import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static org.junit.Assert.*;
 
 public class NoticeUploadTest {
 
     @Rule
-    public ActivityTestRule<NoticeUpload> nActivityTestRule = new ActivityTestRule<NoticeUpload>(NoticeUpload.class);
+    public ActivityTestRule<NoticeUpload> eActivityTestRule = new ActivityTestRule<NoticeUpload>(NoticeUpload.class);
 
-    private NoticeUpload nActivity = null;
+    private NoticeUpload notice = null;
+    private ImageView Imageview;
 
-    Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(DisplayNotice.class.getName(),null,false);
 
     @Before
     public void setUp() throws Exception {
 
-        nActivity = nActivityTestRule.getActivity();
+        notice = eActivityTestRule.getActivity();
+
+        Imageview = (ImageView) notice.findViewById(R.id.autoCompleteTextView);
+
     }
-
     @Test
-    public  void testLaunchSecondActivityOnButtonClick(){
-        assertNotNull(nActivity.findViewById(R.id.cameraBtn));
-
-        onView(withId(R.id.cameraBtn)).perform(click());
-
-        Activity secondActicvity = getInstrumentation().waitForMonitorWithTimeout(monitor,5000);
-
-        assertNotNull(secondActicvity);
-        secondActicvity.finish();
-
+    public void testLaunch(){
+        View view = notice.findViewById(R.id.displayImageView);
+        assertNotNull(view);
     }
 
     @After
     public void tearDown() throws Exception {
+        notice = null;
+
     }
 }
