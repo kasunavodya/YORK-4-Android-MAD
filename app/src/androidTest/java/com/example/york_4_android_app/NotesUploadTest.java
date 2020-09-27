@@ -1,3 +1,6 @@
+//IT19146652
+//V.W.A.N.R. Wickramasinghe
+
 package com.example.york_4_android_app;
 
 import android.app.Instrumentation;
@@ -16,7 +19,7 @@ public class NotesUploadTest {
     @Rule
     public ActivityTestRule<NoticeUpload> nActivityTestRule = new ActivityTestRule<NoticeUpload>(NoticeUpload.class);
 
-    private NotesUpload notesUpload = null;
+    private NoticeUpload notesUpload = null;
 
     Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(DisplayNotice.class.getName(),null,false);
 

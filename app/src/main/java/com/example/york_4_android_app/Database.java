@@ -31,6 +31,8 @@ public class Database extends SQLiteOpenHelper {
     public static final String TABLE_NAME7 = "notes_table";
     //Video Upload table
     public static final String TABLE_NAME8 = "video_table";
+    //AddSlip table
+    public static final String TABLE_NAME9 = "AddSlip";
 
     //homework table columns
     public static final String COL_1 = "ID";
@@ -79,6 +81,10 @@ public class Database extends SQLiteOpenHelper {
     public static final String COL_001 = "ID";
     public static final String COL_002 = "NAME";
 
+    //Add Slip table columns
+    public static final String COL1111 = "ID";
+    public static final String COL2222 = "IMAGE";
+
     public Database(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
         // SQLiteDatabase db = this.getWritableDatabase();
@@ -96,6 +102,7 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("create table " + TABLE_NAME6 + " (ID TEXT PRIMARY KEY , NAME TEXT, EMAIL TEXT, PASSOWRD TEXT)");
         db.execSQL("create table " + TABLE_NAME7 + " (ID TEXT PRIMARY KEY , NAME TEXT, GRADE INTEGER)");
         db.execSQL("create table " + TABLE_NAME8 + " (ID TEXT PRIMARY KEY , NAME TEXT, GRADE INTEGER)");
+        db.execSQL("create table " + TABLE_NAME9 + " (ID TEXT PRIMARY KEY, IMAGE BLOB NOT NULL )");
 
     }
 
@@ -110,6 +117,8 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME6);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME7);
         db.execSQL("DROP TABLE IF EXISTS " +TABLE_NAME8);
+        db.execSQL("DROP TABLE IF EXISTS " +TABLE_NAME9);
+
 
         onCreate(db);
     }
@@ -266,6 +275,8 @@ public class Database extends SQLiteOpenHelper {
 
     //---------------------------------------------------------------------------
 
+
+    //Insert weekend timetable data
     public boolean insertData1 (String Sub_Name , String Start_Time , String End_Time  , String Lecture_Name ) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues(  );
@@ -321,6 +332,28 @@ public class Database extends SQLiteOpenHelper {
             return false;
         else
             return true;
+    }
+
+    //----------------------------------------------------------------------------
+
+    //AddSlip
+    public boolean insertDetailsSlip (String id, ImageView image) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(COL1111,id);
+        contentValues.put(COL2222, String.valueOf(image));
+        long result = db.insert(TABLE_NAME7,null, contentValues);
+
+        if(result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public Integer deleteSlipImgData (String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME7, "ID = ?", new String[] { id });
     }
 
     //----------------------------------------------------------------------------

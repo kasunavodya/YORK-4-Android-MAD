@@ -13,6 +13,11 @@ public class CalculateTF extends AppCompatActivity {
     TextView answer;
     CheckBox checkBox1, checkBox2, checkBox3;
 
+    int results;
+    int x = 30000;
+    int y = 2000;
+    int z = 5000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,35 +39,43 @@ public class CalculateTF extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (checkBox1.isChecked() && !checkBox2.isChecked() && !checkBox3.isChecked()) {
-                    answer.setText("Rs: " + 30000);
+                    results = x;
+                    answer.setText("Rs: " + results);
                 }
 
                 else if (checkBox2.isChecked() && !checkBox1.isChecked() && !checkBox3.isChecked()) {
-                    answer.setText("Rs: " + 2000);
+                    results = y;
+                    answer.setText("Rs: " + results);
                 }
 
                 else if (checkBox3.isChecked() && !checkBox1.isChecked() && !checkBox2.isChecked()) {
-                    answer.setText("Rs: " + 5000);
+                    results = z;
+                    answer.setText("Rs: " + results);
                 }
 
                 else if (checkBox1.isChecked() && checkBox2.isChecked() && !checkBox3.isChecked()) {
-                    answer.setText("Rs: " + 32000);
+                    results = x + y;
+                    answer.setText("Rs: " + results);
                 }
 
                 else if (checkBox1.isChecked() && checkBox3.isChecked() && !checkBox2.isChecked()) {
-                    answer.setText("Rs: " + 35000);
+                    results = x + z;
+                    answer.setText("Rs: " + results);
                 }
 
                 else if (checkBox2.isChecked() && checkBox3.isChecked() && !checkBox1.isChecked()) {
-                    answer.setText("Rs: " + 7000);
+                    results = y + z;
+                    answer.setText("Rs: " + results);
                 }
 
                 else if (checkBox1.isChecked() && checkBox2.isChecked() && checkBox3.isChecked()) {
-                    answer.setText("Rs: " + 37000);
+                    results = x + y + z;
+                    answer.setText("Rs: " + results);
                 }
 
                 else {
-                    answer.setText("Rs: " + 0);
+                    results = 0;
+                    answer.setText("Rs: " + results);
                 }
             }
         });
