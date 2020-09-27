@@ -54,7 +54,7 @@
 24-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:14:22-78
 25
 26    <application
-26-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:20:5-71:19
+26-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:20:5-70:19
 27        android:allowBackup="true"
 27-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:21:9-35
 28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -71,113 +71,116 @@
 34        android:testOnly="true"
 35        android:theme="@style/AppTheme" >
 35-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:26:9-40
-36        <activity android:name="com.example.york_4_android_app.AddTimeTable5" />
-36-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:28:9-50
-36-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:28:19-48
-37        <activity android:name="com.example.york_4_android_app.AddTimeTable4" />
-37-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:29:9-51
-37-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:29:19-48
-38        <activity android:name="com.example.york_4_android_app.ViewUploadDetails" />
-38-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:30:9-55
-38-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:30:19-52
-39        <activity android:name="com.example.york_4_android_app.ViewStudentDetails" />
-39-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:31:9-56
-39-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:31:19-53
-40        <activity android:name="com.example.york_4_android_app.DisplayVideo" />
-40-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:32:9-50
-40-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:32:19-47
-41        <activity android:name="com.example.york_4_android_app.VideoUploading" />
-41-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:33:9-52
-41-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:33:19-49
-42        <activity android:name="com.example.york_4_android_app.DisplayNotice" />
-42-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:34:9-51
-42-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:34:19-48
-43        <activity android:name="com.example.york_4_android_app.NoticeUpload" />
-43-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:35:9-50
-43-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:35:19-47
-44        <activity android:name="com.example.york_4_android_app.SignUp" />
-44-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:36:9-44
-44-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:36:19-41
-45        <activity android:name="com.example.york_4_android_app.NotesView" />
-45-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:37:9-47
-45-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:37:19-44
-46        <activity android:name="com.example.york_4_android_app.NotesUpload" />
-46-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:38:9-49
-46-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:38:19-46
-47        <activity android:name="com.example.york_4_android_app.AdminUpload" />
-47-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:39:9-49
-47-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:39:19-46
-48        <activity android:name="com.example.york_4_android_app.Admin_Login" />
-48-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:40:9-49
-48-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:40:19-46
-49        <activity android:name="com.example.york_4_android_app.AddSlip" />
-49-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:41:9-45
-49-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:41:19-42
-50        <activity android:name="com.example.york_4_android_app.MainTermRegister" />
-50-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:42:9-54
-50-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:42:19-51
-51        <activity android:name="com.example.york_4_android_app.CalculateTF" />
-51-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:43:9-49
-51-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:43:19-46
-52        <activity android:name="com.example.york_4_android_app.AddTimetable3" />
-52-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:44:9-51
-52-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:44:19-48
-53        <activity android:name="com.example.york_4_android_app.AddTimetable2" />
-53-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:45:9-51
-53-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:45:19-48
-54        <activity android:name="com.example.york_4_android_app.AddTimetable" />
-54-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:46:9-50
-54-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:46:19-47
-55        <activity android:name="com.example.york_4_android_app.ErrorHW" />
-55-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:47:9-45
-55-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:47:19-42
-56        <activity android:name="com.example.york_4_android_app.UploadHW" />
-56-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:48:9-46
-56-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:48:19-43
-57        <activity android:name="com.example.york_4_android_app.EnterDetails" />
-57-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:49:9-50
-57-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:49:19-47
-58        <activity android:name="com.example.york_4_android_app.MainActivity" />
-58-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:50:9-50
-58-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:50:19-47
-59        <activity android:name="com.example.york_4_android_app.activity_admin" />
-59-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:51:9-52
-59-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:51:19-49
-60        <activity android:name="com.example.york_4_android_app.activity_student" />
-60-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:52:9-54
-60-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:52:19-51
-61        <activity android:name="com.example.york_4_android_app.HomePage" >
-61-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:53:9-60:20
-61-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:53:19-43
-62            <intent-filter>
-62-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:55:13-59:29
-63                <action android:name="android.intent.action.MAIN" />
-63-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:56:17-69
-63-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:56:25-66
-64
-65                <category android:name="android.intent.category.LAUNCHER" />
-65-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:58:17-77
-65-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:58:27-74
-66            </intent-filter>
-67        </activity>
-68
-69        <provider
-69-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:62:9-70:20
-70            android:name="androidx.core.content.FileProvider"
-70-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:63:13-62
-71            android:authorities="com.example.android.FILE_PROVIDER_PATHS"
-71-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:64:13-74
-72            android:exported="false"
-72-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:65:13-37
-73            android:grantUriPermissions="true" >
-73-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:66:13-47
-74            <meta-data
-74-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:67:13-69:54
-75                android:name="android.support.FILE_PROVIDER_PATHS"
-75-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:68:17-67
-76                android:resource="@xml/file_paths" />
-76-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:69:17-51
-77        </provider>
-78    </application>
-79
-80</manifest>
+36        <activity android:name="com.example.york_4_android_app.ViewAdminWeekday" />
+36-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:27:9-63
+36-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:27:19-51
+37        <activity android:name="com.example.york_4_android_app.AddTimeTable5" />
+37-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:28:9-51
+37-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:28:19-48
+38        <activity android:name="com.example.york_4_android_app.AddTimeTable4" />
+38-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:29:9-51
+38-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:29:19-48
+39        <activity android:name="com.example.york_4_android_app.ViewUploadDetails" />
+39-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:30:9-55
+39-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:30:19-52
+40        <activity android:name="com.example.york_4_android_app.ViewStudentDetails" />
+40-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:31:9-56
+40-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:31:19-53
+41        <activity android:name="com.example.york_4_android_app.DisplayVideo" />
+41-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:32:9-50
+41-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:32:19-47
+42        <activity android:name="com.example.york_4_android_app.VideoUploading" />
+42-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:33:9-52
+42-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:33:19-49
+43        <activity android:name="com.example.york_4_android_app.DisplayNotice" />
+43-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:34:9-51
+43-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:34:19-48
+44        <activity android:name="com.example.york_4_android_app.NoticeUpload" />
+44-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:35:9-50
+44-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:35:19-47
+45        <activity android:name="com.example.york_4_android_app.SignUp" />
+45-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:36:9-44
+45-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:36:19-41
+46        <activity android:name="com.example.york_4_android_app.NotesView" />
+46-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:37:9-47
+46-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:37:19-44
+47        <activity android:name="com.example.york_4_android_app.NotesUpload" />
+47-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:38:9-49
+47-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:38:19-46
+48        <activity android:name="com.example.york_4_android_app.AdminUpload" />
+48-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:39:9-49
+48-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:39:19-46
+49        <activity android:name="com.example.york_4_android_app.Admin_Login" />
+49-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:40:9-49
+49-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:40:19-46
+50        <activity android:name="com.example.york_4_android_app.AddSlip" />
+50-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:41:9-45
+50-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:41:19-42
+51        <activity android:name="com.example.york_4_android_app.MainTermRegister" />
+51-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:42:9-54
+51-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:42:19-51
+52        <activity android:name="com.example.york_4_android_app.CalculateTF" />
+52-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:43:9-49
+52-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:43:19-46
+53        <activity android:name="com.example.york_4_android_app.AddTimetable3" />
+53-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:44:9-51
+53-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:44:19-48
+54        <activity android:name="com.example.york_4_android_app.AddTimetable2" />
+54-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:45:9-51
+54-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:45:19-48
+55        <activity android:name="com.example.york_4_android_app.AddTimetable" />
+55-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:46:9-50
+55-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:46:19-47
+56        <activity android:name="com.example.york_4_android_app.ErrorHW" />
+56-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:47:9-45
+56-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:47:19-42
+57        <activity android:name="com.example.york_4_android_app.UploadHW" />
+57-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:48:9-46
+57-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:48:19-43
+58        <activity android:name="com.example.york_4_android_app.EnterDetails" />
+58-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:49:9-50
+58-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:49:19-47
+59        <activity android:name="com.example.york_4_android_app.MainActivity" />
+59-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:50:9-50
+59-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:50:19-47
+60        <activity android:name="com.example.york_4_android_app.activity_admin" />
+60-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:51:9-52
+60-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:51:19-49
+61        <activity android:name="com.example.york_4_android_app.activity_student" />
+61-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:52:9-54
+61-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:52:19-51
+62        <activity android:name="com.example.york_4_android_app.HomePage" >
+62-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:53:9-59:20
+62-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:53:19-43
+63            <intent-filter>
+63-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:54:13-58:29
+64                <action android:name="android.intent.action.MAIN" />
+64-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:55:17-69
+64-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:55:25-66
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:57:17-77
+66-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:57:27-74
+67            </intent-filter>
+68        </activity>
+69
+70        <provider
+70-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:61:9-69:20
+71            android:name="androidx.core.content.FileProvider"
+71-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:62:13-62
+72            android:authorities="com.example.android.FILE_PROVIDER_PATHS"
+72-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:63:13-74
+73            android:exported="false"
+73-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:64:13-37
+74            android:grantUriPermissions="true" >
+74-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:65:13-47
+75            <meta-data
+75-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:66:13-68:54
+76                android:name="android.support.FILE_PROVIDER_PATHS"
+76-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:67:17-67
+77                android:resource="@xml/file_paths" />
+77-->C:\Users\49176\Desktop\YORK-4-Android-MAD\app\src\main\AndroidManifest.xml:68:17-51
+78        </provider>
+79    </application>
+80
+81</manifest>
