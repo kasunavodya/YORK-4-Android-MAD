@@ -15,9 +15,9 @@ public class NotesView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes_view);
+        pdfView =(PDFView)findViewById(R.id.pdfviewer);
+        pdfView.fromAsset("grade9.pdf").load();
 
-        pdfView=(PDFView)findViewById(R.id.pdfViewer);
-        pdfView.fromAsset("grade9").load();
 
     }
 

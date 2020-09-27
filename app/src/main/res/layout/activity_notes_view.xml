@@ -7,10 +7,10 @@
     android:background="@drawable/backstu"
     tools:context=".NotesView">
 
-   <com.github.barteksc.pdfviewer.PDFView
-       android:id="@+id/pdfViewer"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"/>
+  <com.github.barteksc.pdfviewer.PDFView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+     android:id="@+id/pdfviewer"/>
 
 
 

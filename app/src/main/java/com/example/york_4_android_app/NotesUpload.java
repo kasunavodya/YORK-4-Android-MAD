@@ -12,8 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class NotesUpload extends AppCompatActivity {
 
     Database mydb1;
-    private EditText name, grade ;
-    private Button uploadPDF, delete_btn, view_btn;
+    EditText name, grade ;
+    Button uploadPDF, delete_btn, view_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
